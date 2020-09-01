@@ -6,7 +6,8 @@
 //  Copyright © 2019 feewee. All rights reserved.
 //
 
-#import <ImSDK/IMMessageExt.h>
+#import <ImSDK/V2TIMManager.h>
+#import <ImSDK/TIMCallback.h>
 
 @class IMMessageInfo;
 

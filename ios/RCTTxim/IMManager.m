@@ -69,17 +69,18 @@
   }
   sdkAppId = [sdkAppIdValue intValue];
   sdkConfig.sdkAppId = sdkAppId;
-  NSString *accountType = [configDict valueForKey:@"accountType"];
-  if (!accountType) {
-    IM_LOG_TAG_ERROR(@"Init", @"未配置accountType");
-    return NO;
-  }
-  sdkConfig.accountType = accountType;
+  //新版本不用了
+  // NSString *accountType = [configDict valueForKey:@"accountType"];
+  // if (!accountType) {
+  //   IM_LOG_TAG_ERROR(@"Init", @"未配置accountType");
+  //   return NO;
+  // }
+  // sdkConfig.accountType = accountType;
   // 是否crash上报
-  id disableCrashReportValue = [configDict valueForKey:@"disableCrashReport"];
-  if (disableCrashReportValue) {
-    sdkConfig.disableCrashReport = [disableCrashReportValue boolValue];
-  }
+//  id disableCrashReportValue = [configDict valueForKey:@"disableCrashReport"];
+//  if (disableCrashReportValue) {
+//    sdkConfig.disableCrashReportValue = [disableCrashReportValue boolValue];
+//  }
   // 是否允许log打印
   id disableLogPrintValue = [configDict valueForKey:@"disableLogPrint"];
   if (disableLogPrintValue) {

@@ -1,6 +1,6 @@
 {
-  "name": "react-native-txim",
-  "version": "0.4.3",
+  "name": "@yz1311/react-native-txim",
+  "version": "0.4.5",
   "description": "腾讯IM的RN集成 alpha版",
   "main": "index.js",
   "directories": {
@@ -17,6 +17,9 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/kurisu994/react-native-txim.git"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [
     "react-native",

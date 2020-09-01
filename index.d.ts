@@ -1,4 +1,4 @@
-import { EmitterSubscription } from 'react-native';
+import { EmitterSubscription, DeviceEventEmitter } from 'react-native';
 
 export class IMInitModule {
   /**添加用户在线状态监听器*/
@@ -8,6 +8,29 @@ export class IMInitModule {
   /**登出*/
   static logout: () => Promise<boolean>;
 }
+
+export const IMEventEmitter: DeviceEventEmitter;
+
+export const EventName = {
+  //用户状态改变
+  loginStatus: 'loginStatus',
+  //初始化状态
+  initializeStatus: 'initializeStatus',
+  //登录状态
+  userStatus: 'userStatus',
+  //消息发送状态(android only)
+  sendStatus: 'sendStatus',
+  //收到消息时的监听
+  onNewMessage: 'onNewMessage',
+  //获取会话(android only)
+  conversationStatus: 'conversationStatus',
+  //获取会话列表事件(android only)
+  conversationListStatus: 'conversationListStatus',
+  //会话列表刷新(android only)
+  onConversationRefresh: 'onConversationRefresh',
+  //获取消息事件(android only)
+  onMessageQuery: 'onMessageQuery',
+};
 
 export class IMChatModule {
   /**添加消息接收监听器*/

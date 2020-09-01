@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.prefix_header_file    = 'ios/RCTTxim/txim.pch'
   s.source_files          = 'ios/RCTTxim/{Constant,Listener,Message,Module}/*.{h,m}', 'ios/RCTTxim/*.{h,m}'
-  s.vendored_frameworks   = 'ios/RCTTxim/*.framework'
 
   s.dependency 'React'
+  s.dependency 'TXIMSDK_iOS'
 end

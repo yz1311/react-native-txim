@@ -74,10 +74,11 @@
     info.isRead = [msg isPeerReaded];
   } else {// 接收消息
     // 发送方信息
-    TIMUserProfile *profile = [msg getSenderProfile];
-    info.sender = [profile identifier];
-    info.senderAvatar = [profile faceURL];
-    info.senderNickName = [profile nickname];
+    //现在方法变成异步的了
+    // TIMUserProfile *profile = [msg getSenderProfile];
+    // info.sender = [profile identifier];
+    // info.senderAvatar = [profile faceURL];
+    // info.senderNickName = [profile nickname];
     // 接收方信息，这里为自己
     info.receiver = [[msg getConversation] getSelfIdentifier];
     info.isRead = [msg isReaded];
